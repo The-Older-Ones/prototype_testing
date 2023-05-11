@@ -8,7 +8,6 @@ socket.on('question', (question) => {
         const questionElement = document.querySelector('#question');
         questionElement.textContent = decodeURIComponent(question.question);
         // const answersElement = document.querySelector('#answers');
-
         // display the answers as checkboxes
         const answersElement = document.querySelector('#answers');
         answersElement.innerHTML = '';
@@ -68,8 +67,8 @@ socket.on('question', (question) => {
     console.log('Received null question');
 }
 });
-// emit a 'joinLobby' event to join a lobby
-socket.emit('joinLobby', 1);
+// // emit a 'joinLobby' event to join a lobby
+// socket.emit('joinLobby', 1);
 
-// emit a 'newQuestion' event to request a new question from the server
-socket.emit('newQuestion', 1, 9);
+// // emit a 'newQuestion' event to request a new question from the server
+// socket.emit('newQuestion', 1, 9);
