@@ -21,7 +21,6 @@ socket.on('question', (question) => {
             labelElement.textContent = decodeURIComponent(answer);
             answerElement.appendChild(checkboxElement);
             answerElement.appendChild(labelElement);
-
             // add an event listener to the checkbox that listens for the 'click' event
             checkboxElement.addEventListener('click', (event) => {
                 if (event.target.checked && event.target.value === decodeURIComponent(question.correct_answer)) {
@@ -34,7 +33,6 @@ socket.on('question', (question) => {
                     answerElement.appendChild(correctAnswerText);
                 }
             });
-
             answersElement.appendChild(answerElement);
         });
         const correctAnswerElement = document.createElement('li');
@@ -46,7 +44,6 @@ socket.on('question', (question) => {
         labelElement.textContent = decodeURIComponent(question.correct_answer);
         correctAnswerElement.appendChild(checkboxElement);
         correctAnswerElement.appendChild(labelElement);
-
         // add an event listener to the checkbox that listens for the 'click' event
         checkboxElement.addEventListener('click', (event) => {
             if (event.target.checked) {
@@ -59,7 +56,6 @@ socket.on('question', (question) => {
                 correctAnswerElement.appendChild(correctAnswerText);
             }
         });
-
         answersElement.appendChild(correctAnswerElement);
 
     console.log('Received question:', question);

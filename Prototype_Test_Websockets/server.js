@@ -6,7 +6,13 @@ const test = require('./test.js');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server); //creating a socket.io instance on top of the HTTP Server
+const io = socketio(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["content-type"]
+  }
+}); //creating a socket.io instance on top of the HTTP Server
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
