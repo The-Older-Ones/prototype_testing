@@ -14,7 +14,7 @@ function joinLobby(lobbyId) {
   console.log('Lobby entering');
   // fetch token from API
   fetchToken().then((fetchedToken) => {
-    token = fetchedToken;
+    token = fetchedToken; 
     // method to add the client to the appropriate lobby room, based on the lobbyId passed in by the client
     gameSocket.join(`lobby-${lobbyId}`);
     // send token to client
