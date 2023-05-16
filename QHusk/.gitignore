@@ -1,3 +1,4 @@
 /node_modules
 /Q/OpenTrivia/*
+/Q/TriviaApi/*
 !.gitkeep
