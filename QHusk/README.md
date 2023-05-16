@@ -2,6 +2,7 @@
 ---
 ## Benötigte Technologien
 - Node V19.2.0 oder höher
+- npm
 ---
 ## Installation
 - npm install
