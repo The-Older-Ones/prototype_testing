@@ -8,7 +8,7 @@ const TokenRequest = process.env.OPEN_TRIVIA_GET_TOKEN;
 const DefaultAmount = process.env.OPEN_TRIVIA_DEFAULT_AMOUNT;
 const DefaultEncoding = process.env.OPEN_TRIVIA_ENCODE
 
-const { categoryTable, conversation, responseCode , minCategorieNumber , maxCategorieNumber } = require("./OpenTrivia_TextTable");
+const { categoryTable, conversation, responseCode, minCategorieNumber, maxCategorieNumber } = require("./OpenTrivia_TextTable");
 
 main = async () => {
     try {
@@ -154,6 +154,4 @@ apiErrorHandler = (errorCode) => {
     throw new Error(message);
 }
 
-main();
-
-
+module.exports = main 
