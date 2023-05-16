@@ -1,4 +1,6 @@
 /node_modules
 /Q/OpenTrivia/*
 /Q/TriviaApi/*
+/Themis/input/*
+/Themis/output/*
 !.gitkeep

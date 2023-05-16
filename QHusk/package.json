@@ -3,6 +3,8 @@
     "dotenv": "^16.0.3"
   },
   "scripts": {
-    "start": "node ./startPoint.js"
+    "start": "node ./startPoint.js",
+    "themis": "node ./Themis/Themis.js"
+
   }
 }
