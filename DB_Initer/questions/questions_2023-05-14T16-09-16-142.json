@@ -1,0 +1,602 @@
+[
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What year was the game Team Fortress 2 released?",
+    "correct_answer": "2007",
+    "incorrect_answers": [
+      "2009",
+      "2005",
+      "2010"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which popular First Person Shooter (FPS) franchise, got a Real Time Strategy (RTS) game developed based on its universe?",
+    "correct_answer": "Halo",
+    "incorrect_answers": [
+      "Battlefield",
+      "Call of Duty",
+      "Borderlands"
+    ]
+  },
+  {
+    "category": "Entertainment: Books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the Beatrix Potter books, what type of animal is Tommy Brock?",
+    "correct_answer": "Badger",
+    "incorrect_answers": [
+      "Fox",
+      "Frog",
+      "Rabbit"
+    ]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who had a 1973 hit with the song 'Hocus Pocus'?",
+    "correct_answer": "Focus",
+    "incorrect_answers": [
+      "Pilot",
+      "Rush",
+      "AC/DC"
+    ]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which band had hits in 1972 with the songs \"Baby I'm A Want You\", \"Everything I Own\" and \"The Guitar Man\"",
+    "correct_answer": "Bread",
+    "incorrect_answers": [
+      "America",
+      "Chicago",
+      "Smokie"
+    ]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Typically, how many keys are on a piano?",
+    "correct_answer": "88",
+    "incorrect_answers": [
+      "24",
+      "12",
+      "96"
+    ]
+  },
+  {
+    "category": "Geography",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "How many counties in the Republic of Ireland.",
+    "correct_answer": "26",
+    "incorrect_answers": [
+      "32",
+      "28",
+      "30"
+    ]
+  },
+  {
+    "category": "Science & Nature",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What was the first living creature in space?",
+    "correct_answer": "Fruit Flies ",
+    "incorrect_answers": [
+      "Monkey",
+      "Dog",
+      "Mouse"
+    ]
+  },
+  {
+    "category": "Science & Nature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "On the Beaufort Scale of wind force, what wind name is given to number 8?",
+    "correct_answer": "Gale",
+    "incorrect_answers": [
+      "Storm",
+      "Hurricane",
+      "Breeze"
+    ]
+  },
+  {
+    "category": "Entertainment: Television",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "In the original Star Trek TV series, what was Captain James T. Kirk's middle name?",
+    "correct_answer": "Tiberius",
+    "incorrect_answers": [
+      "Trevor",
+      "Travis",
+      "Tyrone"
+    ]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which country is singer Kyary Pamyu Pamyu from?",
+    "correct_answer": "Japan",
+    "incorrect_answers": [
+      "South Korea",
+      "China",
+      "Vietnam"
+    ]
+  },
+  {
+    "category": "Vehicles",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "The difference between the lengths of a Boeing 777-300ER and an Airbus A350-1000 is closest to:",
+    "correct_answer": "0.1m",
+    "incorrect_answers": [
+      "1m",
+      "10m ",
+      "100m"
+    ]
+  },
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What did the name of the Tor Anonymity Network orignially stand for?",
+    "correct_answer": "The Onion Router",
+    "incorrect_answers": [
+      "The Only Router",
+      "The Orange Router",
+      "The Ominous Router"
+    ]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "EDM producer Marshmello performs live wearing clothes and a marshmallow mask of what colour?",
+    "correct_answer": "White",
+    "incorrect_answers": [
+      "Black",
+      "Blue",
+      "Yellow"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "In what year was the game \"Fallout\" released?",
+    "correct_answer": "1997",
+    "incorrect_answers": [
+      "1998",
+      "1999",
+      "1996"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "In the \"Worms\" series of video games, which of these weapons is affected by wind?",
+    "correct_answer": "Bazooka",
+    "incorrect_answers": [
+      "Grenade",
+      "Air Strike",
+      "Mortar"
+    ]
+  },
+  {
+    "category": "Entertainment: Books",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "The novel \"Jane Eyre\" was written by what author? ",
+    "correct_answer": "Charlotte Brontë",
+    "incorrect_answers": [
+      "Emily Brontë",
+      "Jane Austen",
+      "Louisa May Alcott"
+    ]
+  },
+  {
+    "category": "History",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What year did the Boxing Day earthquake & tsunami occur in the Indian Ocean?",
+    "correct_answer": "2004",
+    "incorrect_answers": [
+      "2006",
+      "2008",
+      "2002"
+    ]
+  },
+  {
+    "category": "Geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Fucking is a village in which country?",
+    "correct_answer": "Austria",
+    "incorrect_answers": [
+      "Germany",
+      "Switzerland",
+      "Czech Republic"
+    ]
+  },
+  {
+    "category": "Entertainment: Books",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the name of the protagonist of J.D. Salinger's novel Catcher in the Rye?",
+    "correct_answer": "Holden Caulfield",
+    "incorrect_answers": [
+      "Fletcher Christian",
+      "Jay Gatsby",
+      "Randall Flagg"
+    ]
+  },
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of these programming languages is a low-level language?",
+    "correct_answer": "Assembly",
+    "incorrect_answers": [
+      "Python",
+      "C#",
+      "Pascal"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "In what year was Hearthstone released?",
+    "correct_answer": "2014",
+    "incorrect_answers": [
+      "2011",
+      "2013",
+      "2012"
+    ]
+  },
+  {
+    "category": "Celebrities",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Aubrey Graham is better known as",
+    "correct_answer": "Drake",
+    "incorrect_answers": [
+      "Travis Scott",
+      "Lil Wayne",
+      "2 Chainz"
+    ]
+  },
+  {
+    "category": "Geography",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which of the following Japanese islands is the biggest?",
+    "correct_answer": "Honshu",
+    "incorrect_answers": [
+      "Hokkaido",
+      "Shikoku",
+      "Kyushu"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which of the following characters from the game \"Overwatch\" was revealed to be homosexual in December of 2016?",
+    "correct_answer": "Tracer",
+    "incorrect_answers": [
+      "Widowmaker",
+      "Sombra",
+      "Symmetra"
+    ]
+  },
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of these is not a key value of Agile software development?",
+    "correct_answer": "Comprehensive documentation",
+    "incorrect_answers": [
+      "Individuals and interactions",
+      "Customer collaboration",
+      "Responding to change"
+    ]
+  },
+  {
+    "category": "Entertainment: Television",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What breed of dog is \"Scooby Doo\"?",
+    "correct_answer": "Great Dane",
+    "incorrect_answers": [
+      "Pit bull",
+      "Boxer",
+      "Doberman Pinscher"
+    ]
+  },
+  {
+    "category": "Sports",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who won the \"Champions League\" in 1999?",
+    "correct_answer": "Manchester United",
+    "incorrect_answers": [
+      "Barcelona",
+      "Bayern Munich",
+      "Liverpool"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Sean Bean voices the character of \"Martin Septim\" in which Elder Scrolls game?",
+    "correct_answer": "The Elder Scrolls IV: Oblivion",
+    "incorrect_answers": [
+      "The Elder Scrolls V: Skyrim",
+      "The Elder Scrolls III: Morrowind ",
+      "The Elder Scrolls Online"
+    ]
+  },
+  {
+    "category": "Politics",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who was elected leader of the UK Labour Party in September 2015?",
+    "correct_answer": "Jeremy Corbyn",
+    "incorrect_answers": [
+      "Ed Miliband",
+      "David Cameron",
+      "Theresa May"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "In the \"PAYDAY\" series, what is the real name of the character known as \"Dallas\"?",
+    "correct_answer": "Nathan Steele",
+    "incorrect_answers": [
+      "Nate Siemens",
+      "Nick Stamos",
+      "Nolan Stuhlinger"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who developed the 2016 farming RPG \"Stardew Valley\"?",
+    "correct_answer": "Eric Barone",
+    "incorrect_answers": [
+      "Daisuke Amaya",
+      "Jasper Byrne",
+      "Lucas Pope"
+    ]
+  },
+  {
+    "category": "Entertainment: Japanese Anime & Manga",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "In \"Highschool DxD\", what is the name of the item some humans are born with?",
+    "correct_answer": "Sacred Gear",
+    "incorrect_answers": [
+      "Imperial Arm",
+      "Hallowed Relic",
+      "Blessed Artifact"
+    ]
+  },
+  {
+    "category": "Entertainment: Musicals & Theatres",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who played \"Charlie Price\" in the musical \"Kinky Boots\" on Broadway in New York from May 26th - Aug 6th 2017?",
+    "correct_answer": "Brendon Urie",
+    "incorrect_answers": [
+      "Ed Sheeren",
+      "Tom Cruise",
+      "Dallon Weekes"
+    ]
+  },
+  {
+    "category": "History",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "On which aircraft carrier did the Doolitte Raid launch from on April 18, 1942 during World War II?",
+    "correct_answer": "USS Hornet",
+    "incorrect_answers": [
+      "USS Enterprise",
+      "USS Lexington",
+      "USS Saratoga"
+    ]
+  },
+  {
+    "category": "Entertainment: Film",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which town is the setting for the Disney movie The Love Bug (1968)?",
+    "correct_answer": "San Francisco",
+    "incorrect_answers": [
+      "Los Angeles",
+      "Sacramento",
+      "San Jose"
+    ]
+  },
+  {
+    "category": "Entertainment: Film",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Where does the original Friday The 13th movie take place?",
+    "correct_answer": "Camp Crystal Lake",
+    "incorrect_answers": [
+      "Packanack",
+      "Higgins Haven",
+      "Camp Forest Green"
+    ]
+  },
+  {
+    "category": "Science & Nature",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Coulrophobia is the irrational fear of what?",
+    "correct_answer": "Clowns",
+    "incorrect_answers": [
+      "Cemeteries",
+      "Needles",
+      "Tunnels"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "In the \"Hitman\" series, what is the name of the main character?",
+    "correct_answer": "Agent 47",
+    "incorrect_answers": [
+      "Agent 27",
+      "Agent Smith",
+      "Agent 67"
+    ]
+  },
+  {
+    "category": "History",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which of the following was Brazil was a former colony under?",
+    "correct_answer": "Portugal",
+    "incorrect_answers": [
+      "Spain",
+      "The Netherlands",
+      "France"
+    ]
+  },
+  {
+    "category": "Entertainment: Film",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which boxer was famous for striking the gong in the introduction to J. Arthur Rank films?",
+    "correct_answer": "Bombardier Billy Wells",
+    "incorrect_answers": [
+      "Freddie Mills",
+      "Terry Spinks",
+      "Don Cockell"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "In \"Kingdom Hearts\", who abducts Jasmine in the Lamp Chamber?",
+    "correct_answer": "Riku",
+    "incorrect_answers": [
+      "Riku Replica",
+      "Xaldin",
+      "Captain Hook"
+    ]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What country did Shirley Bassey originate from?",
+    "correct_answer": "Wales",
+    "incorrect_answers": [
+      "America",
+      "England",
+      "Canada"
+    ]
+  },
+  {
+    "category": "Entertainment: Japanese Anime & Manga",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of these is not a world in the anime \"Buddyfight\"?",
+    "correct_answer": "Ancient Dragon World",
+    "incorrect_answers": [
+      "Dragon World",
+      "Star Dragon World",
+      "Darkness Dragon World"
+    ]
+  },
+  {
+    "category": "Entertainment: Japanese Anime & Manga",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Who is the main character in One Piece?",
+    "correct_answer": "Luffy",
+    "incorrect_answers": [
+      "Shanks",
+      "Zoro",
+      "Smoker"
+    ]
+  },
+  {
+    "category": "Science: Computers",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "What type of sound chip does the Super Nintendo Entertainment System (SNES) have?",
+    "correct_answer": "ADPCM Sampler",
+    "incorrect_answers": [
+      "FM Synthesizer",
+      "Programmable Sound Generator (PSG)",
+      "PCM Sampler"
+    ]
+  },
+  {
+    "category": "Entertainment: Japanese Anime & Manga",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What colour hair does the main character of the Yu-Gi-Oh! original anime series have?",
+    "correct_answer": "Red, black and yellow",
+    "incorrect_answers": [
+      "Red, yellow and green",
+      "Red, black and green",
+      "Red, purple and blue"
+    ]
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What is the world's longest venomous snake?",
+    "correct_answer": "King Cobra",
+    "incorrect_answers": [
+      "Green Anaconda",
+      "Inland Taipan",
+      "Yellow Bellied Sea Snake"
+    ]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "In which U.S. state is Far Cry 5's fictional setting 'Hope County' located?",
+    "correct_answer": "Montana",
+    "incorrect_answers": [
+      "Idaho",
+      "Wyoming",
+      "North Carolina"
+    ]
+  },
+  {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "When was the Playstation 3 released?",
+    "correct_answer": "November 11, 2006",
+    "incorrect_answers": [
+      "January 8, 2007",
+      "December 25, 2007",
+      "July 16, 2006"
+    ]
+  }
+]
