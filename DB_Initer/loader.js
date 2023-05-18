@@ -7,8 +7,13 @@ const catalog = [];
 
 main = async () => {
     try {
-        await fileLoader();
-        await fillDB()
+        const sample = await Question.findOne();
+        if(!sample){
+            await fileLoader();
+            await fillDB()
+        } else{
+            console.log("Daten bereits in DB");
+        }
     } catch (err) {
         throw err;
     }
