@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO Button</title>
+  </head>
+  <body>
+    <button id="clickButton" disabled>Klick mich</button>
+    <button id="readyButton">Bereit</button>
+    <div id="result"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+
+      const clickButton = document.getElementById('clickButton');
+      const readyButton = document.getElementById('readyButton');
+      const resultDiv = document.getElementById('result');
+
+      // nach Bereit klick wird klick mich freigeschaltet
+      readyButton.addEventListener('click', () => {
+        readyButton.disabled = true;
+        clickButton.disabled = false;
+        socket.emit('readyClick');
+      });
+
+      // Klickereignis des Buttons behandeln
+      clickButton.addEventListener('click', () => {
+        clickButton.disabled = true;
+        readyButton.disabled = false;
+        socket.emit('buttonClick');
+      });
+
+      // ergebnis anzeigen
+      socket.on('showResult', ({ firstUserId }) => {
+        const message = `Benutzer ${firstUserId} hat zuerst geklickt.`;
+        resultDiv.innerHTML = message;
+      });
+
+      // Aktiviere den "Bereit"-Button, wenn beide Benutzer bereit sind
+      socket.on('bothReady', () => {
+        readyButton.disabled = false;
+        resultDiv.innerHTML = 'Beide Benutzer sind bereit. Klicken Sie auf den Button.';
+      });
+    </script>
+  </body>
+</html>
+
