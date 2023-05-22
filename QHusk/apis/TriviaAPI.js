@@ -10,7 +10,8 @@ main = async () => {
     const repeat = await dialog();
     for (let i = 0; i < repeat; i++) {
         const response = await grabber();
-        await fileWriter(response);
+        const mapped = modelMapper(response);
+        await fileWriter(mapped);
     }
     console.log(conversation[4]);
 }
@@ -66,5 +67,50 @@ fileWriter = async (decodedData) => {
     await fs.writeFile(targetFilePath, jsonData, 'utf8');
     console.log(`Datei: ${fileName} erfolgreich erstellt.`)
 }
+
+// Momentan nur für multiple choice Fragen. Andere werden gefiltert.
+modelMapper = (unmapped) => {
+    let easy = true;
+    let medium = true;
+    let mapped = unmapped
+        .filter((question) => question.type === "text_choice")
+        .map((question) => {
+            let points;
+
+            switch (question.difficulty) {
+                case "easy":
+                    if (easy) {
+                        points = "100";
+                    } else {
+                        points = "200";
+                    }
+                    easy = !easy;
+                    break;
+
+                case "medium":
+                    if (medium) {
+                        points = "400"
+                    } else {
+                        points = "600"
+                    }
+                    medium = !medium;
+                    break;
+                
+                case "hard" : points = "1000"; break;
+            }
+
+            return {
+                category: question.category,
+                type: "multiple",
+                difficulty: points,
+                question: question.question.text,
+                correct_answer: question.correctAnswer,
+                incorrect_answers: question.incorrectAnswers
+            }
+        })
+    return mapped;
+}
+
+// main()
 
 module.exports = main 

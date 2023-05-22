@@ -3,4 +3,6 @@
 /Q/TriviaApi/*
 /Themis/input/*
 /Themis/output/*
+/Fuse/input/*
+/Fuse/output/*
 !.gitkeep

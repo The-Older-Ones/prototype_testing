@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 // Propertie nachdem die Doppelten Fragen aussortiert werden
-const evaluator = "id"
+const evaluator = "question"
 
 const folderPath = __dirname + "/input";
 const hashMap = {};

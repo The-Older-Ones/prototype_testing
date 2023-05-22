@@ -1,6 +1,3 @@
-const open =  require("./apis/OpenTrivia");
-const trivia = require("./apis/TriviaAPI");
-
 const list = [
     "----------------------------------------------",
     "Von welcher API möchten Sie fragen beziehen?\n",
@@ -9,12 +6,12 @@ const list = [
     "\n"
 ]
 
-hub = (num) =>{
+hub = (num) => {
     num = parseInt(num);
-    switch(num){
-        case 1 : return open
-        case 2 : return trivia
-        default : return trivia;
+    switch (num) {
+        case 1: return require("./apis/OpenTrivia")
+        case 2: return require("./apis/TriviaAPI")
+        default: return require("./apis/TriviaAPI");
     }
 }
 

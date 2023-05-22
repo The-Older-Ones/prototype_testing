@@ -6,7 +6,7 @@ const path = require("path");
 const URL = process.env.OPEN_TRIVIA;
 const TokenRequest = process.env.OPEN_TRIVIA_GET_TOKEN;
 const DefaultAmount = process.env.OPEN_TRIVIA_DEFAULT_AMOUNT;
-const DefaultEncoding = process.env.OPEN_TRIVIA_ENCODE
+const DefaultEncoding = process.env.OPEN_TRIVIA_ENCODE;
 
 const { categoryTable, conversation, responseCode, minCategorieNumber, maxCategorieNumber } = require("./OpenTrivia_TextTable");
 
@@ -19,7 +19,8 @@ main = async () => {
         for (let i = 0; i < repeat; i++) {
             const encoded = await grabber(url);
             const decoded = base64Decoder(encoded);
-            await fileWriter(decoded);
+            const mapped = modelMapper(decoded);
+            await fileWriter(mapped);
         }
         console.log(conversation[8]);
     } catch (error) {
@@ -153,5 +154,50 @@ apiErrorHandler = (errorCode) => {
     }
     throw new Error(message);
 }
+
+// Momentan nur für multiple choice Fragen. Andere werden gefiltert.
+modelMapper = (unmapped) => {
+    let easy = true;
+    let medium = true;
+    let mapped = unmapped.results
+        .filter((question) => question.type === "multiple")
+        .map((question) => {
+            let points;
+
+            switch (question.difficulty) {
+                case "easy":
+                    if (easy) {
+                        points = "100";
+                    } else {
+                        points = "200";
+                    }
+                    easy = !easy;
+                    break;
+
+                case "medium":
+                    if (medium) {
+                        points = "400"
+                    } else {
+                        points = "600"
+                    }
+                    medium = !medium;
+                    break;
+                
+                case "hard" : points = "1000"; break;
+            }
+
+            return {
+                category: question.category,
+                type: question.type,
+                difficulty: points,
+                question: question.question,
+                correct_answer: question.correct_answer,
+                incorrect_answers: question.incorrect_answers
+            }
+        })
+    return mapped;
+}
+
+// main();
 
 module.exports = main 

@@ -4,7 +4,8 @@
   },
   "scripts": {
     "start": "node ./startPoint.js",
-    "themis": "node ./Themis/Themis.js"
+    "themis": "node ./Themis/Themis.js",
+    "fuser" : "node ./Fuse/fuser.js"
 
   }
 }

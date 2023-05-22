@@ -1,7 +1,7 @@
 const readline = require("readline");
-const {list , hub} = require ("./hub")
+const { list, hub } = require("./hub")
 
-init = async () =>{
+init = async () => {
     list.forEach((item) => console.log(item));
     const num = await consoleQuestion("");
     const decision = hub(num);
