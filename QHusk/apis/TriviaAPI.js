@@ -6,7 +6,7 @@ const path = require("path");
 const URL = process.env.TRIVIA_API;
 const { conversation } = require("./TriviaAPI_TextTable");
 
-main = async () => {
+const main = async () => {
     const repeat = await dialog();
     for (let i = 0; i < repeat; i++) {
         const response = await grabber();
@@ -16,7 +16,7 @@ main = async () => {
     console.log(conversation[4]);
 }
 
-consoleQuestion = (prompt) => {
+const consoleQuestion = (prompt) => {
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
@@ -31,7 +31,7 @@ consoleQuestion = (prompt) => {
     });
 }
 
-dialog = async () => {
+const dialog = async () => {
     const seperator = () => console.log(conversation[0]);
     seperator();
     console.log(conversation[1]);
@@ -42,7 +42,7 @@ dialog = async () => {
     return dialogNumberConverter(repeat);
 }
 
-dialogNumberConverter = (repeat) => {
+const dialogNumberConverter = (repeat) => {
     repeat ? true : repeat = 1
     repeat = parseInt(repeat);
     isNaN(repeat) ? repeat = 1 : false;
@@ -50,14 +50,14 @@ dialogNumberConverter = (repeat) => {
     return repeat
 }
 
-grabber = async () => {
+const grabber = async () => {
     let response;
     response = await fetch(URL);
     response = await response.json();
     return response;
 }
 
-fileWriter = async (decodedData) => {
+const fileWriter = async (decodedData) => {
     const jsonData = JSON.stringify(decodedData, null, 2);
     const now = new Date();
     const milliseconds = now.getMilliseconds();
@@ -69,7 +69,7 @@ fileWriter = async (decodedData) => {
 }
 
 // Momentan nur für multiple choice Fragen. Andere werden gefiltert.
-modelMapper = (unmapped) => {
+const modelMapper = (unmapped) => {
     let easy = true;
     let medium = true;
     let mapped = unmapped

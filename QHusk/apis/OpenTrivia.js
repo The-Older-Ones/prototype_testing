@@ -10,7 +10,7 @@ const DefaultEncoding = process.env.OPEN_TRIVIA_ENCODE;
 
 const { categoryTable, conversation, responseCode, minCategorieNumber, maxCategorieNumber } = require("./OpenTrivia_TextTable");
 
-main = async () => {
+const main = async () => {
     try {
         const { amount, category, difficult, type, repeat } = await dialog();
         const response = await grabber()
@@ -28,7 +28,7 @@ main = async () => {
     }
 }
 
-urlConstructor = (amount, category, difficult, type, token) => {
+const urlConstructor = (amount, category, difficult, type, token) => {
     let url = URL;
     amount ? url = url + "?amount=" + amount : url = url + "?amount=" + DefaultAmount;
     category ? url = url + "&category=" + category : false;
@@ -44,7 +44,7 @@ urlConstructor = (amount, category, difficult, type, token) => {
     return url;
 }
 
-consoleQuestion = (prompt) => {
+const consoleQuestion = (prompt) => {
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
@@ -59,7 +59,7 @@ consoleQuestion = (prompt) => {
     });
 }
 
-dialog = async () => {
+const dialog = async () => {
     const seperator = () => console.log(conversation[0]);
     seperator();
     console.log(conversation[1]);
@@ -78,7 +78,7 @@ dialog = async () => {
     return dialogNumberConverter(amount, category, difficult, type, repeat);
 }
 
-dialogNumberConverter = (amount, category, difficult, type, repeat) => {
+const dialogNumberConverter = (amount, category, difficult, type, repeat) => {
     categoryNumber = parseInt(category);
     categoryNumber >= minCategorieNumber && categoryNumber <= maxCategorieNumber ? true : category = null
 
@@ -107,7 +107,7 @@ dialogNumberConverter = (amount, category, difficult, type, repeat) => {
     return { amount: amount, category: category, difficult: difficult, type: type, repeat: repeat }
 }
 
-grabber = async (url = null) => {
+const grabber = async (url = null) => {
     let response;
     url ? response = await fetch(url) : response = await fetch(TokenRequest);
     response = await response.json();
@@ -118,7 +118,7 @@ grabber = async (url = null) => {
     }
 }
 
-base64Decoder = (encoded) => {
+const base64Decoder = (encoded) => {
     let decoded = {
         results: encoded.results.map(result => ({
             ...result,
@@ -133,7 +133,7 @@ base64Decoder = (encoded) => {
     return decoded
 }
 
-fileWriter = async (decodedData) => {
+const fileWriter = async (decodedData) => {
     const jsonData = JSON.stringify(decodedData, null, 2);
     const now = new Date();
     const milliseconds = now.getMilliseconds();
@@ -144,7 +144,7 @@ fileWriter = async (decodedData) => {
     console.log(`Datei: ${fileName} erfolgreich erstellt.`)
 }
 
-apiErrorHandler = (errorCode) => {
+const apiErrorHandler = (errorCode) => {
     let message;
     switch (errorCode) {
         case 1: message = responseCode[1]; break;
@@ -156,7 +156,7 @@ apiErrorHandler = (errorCode) => {
 }
 
 // Momentan nur für multiple choice Fragen. Andere werden gefiltert.
-modelMapper = (unmapped) => {
+const modelMapper = (unmapped) => {
     let easy = true;
     let medium = true;
     let mapped = unmapped.results
