@@ -47,10 +47,38 @@ const responseCode = {
     4: "Token Empty Session Token has returned all possible questions for the specified query.Resetting the Token is necessary.",
 }
 
+const categoryMapper = {
+    "Entertainment: Video Games": "Video Games",
+    "Sports": "Sports",
+    "Science & Nature": "Science",
+    "Entertainment: Cartoon & Animations": "Cartoon & Animations",
+    "Art": "Art",
+    "Entertainment: Music": "Music",
+    "Geography": "Geography",
+    "Science: Computers": "Computer",
+    "History": "History",
+    "Animals": "Animals",
+    "Entertainment: Japanese Anime & Manga": "Anime & Manga",
+    "Entertainment: Television": "Film & TV",
+    "Celebrities": "Celebrities",
+    "General Knowledge": "General Knowledge",
+    "Entertainment: Board Games": "Board Games",
+    "Entertainment: Books": "Books",
+    "Science: Mathematics": "Mathematics",
+    "Entertainment: Film": "Film & TV",
+    "Mythology": "Mythology",
+    "Entertainment: Comics": "Comics",
+    "Vehicles": "Vehicles",
+    "Politics": "Politics",
+    "Entertainment: Musicals & Theatres": "Musicals & Theatres",
+    "Science: Gadgets": "Gadgets"
+}
+
 module.exports = {
     categoryTable,
     conversation,
     responseCode,
     minCategorieNumber,
-    maxCategorieNumber
+    maxCategorieNumber,
+    categoryMapper
 }

@@ -8,7 +8,7 @@ const TokenRequest = process.env.OPEN_TRIVIA_GET_TOKEN;
 const DefaultAmount = process.env.OPEN_TRIVIA_DEFAULT_AMOUNT;
 const DefaultEncoding = process.env.OPEN_TRIVIA_ENCODE;
 
-const { categoryTable, conversation, responseCode, minCategorieNumber, maxCategorieNumber } = require("./OpenTrivia_TextTable");
+const { categoryTable, conversation, responseCode, minCategorieNumber, maxCategorieNumber, categoryMapper } = require("./OpenTrivia_TextTable");
 
 const main = async () => {
     try {
@@ -187,7 +187,7 @@ const modelMapper = (unmapped) => {
             }
 
             return {
-                category: question.category,
+                category: categoryMapper[question.category],
                 type: question.type,
                 difficulty: points,
                 question: question.question,

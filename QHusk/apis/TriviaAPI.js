@@ -4,7 +4,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 const URL = process.env.TRIVIA_API;
-const { conversation } = require("./TriviaAPI_TextTable");
+const { conversation , categoryMapper} = require("./TriviaAPI_TextTable");
 
 const main = async () => {
     const repeat = await dialog();
@@ -98,9 +98,9 @@ const modelMapper = (unmapped) => {
                 
                 case "hard" : points = "1000"; break;
             }
-
+            const category = categoryMapper[question.category](question.tags)
             return {
-                category: question.category,
+                category: category,
                 type: "multiple",
                 difficulty: points,
                 question: question.question.text,
@@ -113,4 +113,4 @@ const modelMapper = (unmapped) => {
 
 // main()
 
-module.exports = main 
+module.exports = main
