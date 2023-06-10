@@ -16,16 +16,36 @@ const main = async () => {
         const response = await grabber()
         const token = response.token
         const url = urlConstructor(amount, category, difficult, type, token)
-        for (let i = 0; i < repeat; i++) {
-            const encoded = await grabber(url);
-            const decoded = base64Decoder(encoded);
-            const mapped = modelMapper(decoded);
-            await fileWriter(mapped);
+        const unmapped = { results: [] };
+        try {
+            for (let i = 0; i < repeat; i++) {
+                const encoded = await grabber(url);
+                const decoded = base64Decoder(encoded);
+                decoded.results.forEach((q) => unmapped.results.push(q));
+
+                const progressCheck = (i + 1) % (repeat / 10);
+              
+                if (progressCheck === 0) {
+                  const progress = ((i + 1) / repeat) * 100;
+                  console.log("Progress: " + progress + "%");
+                }
+            }
+        } catch (e) {
+            if (e.message == responseCode[4]) {
+                await finish(unmapped);
+                throw (e);
+            }
         }
+        await finish(unmapped);
         console.log(conversation[8]);
     } catch (error) {
         console.log(error.message)
     }
+}
+
+const finish = async (unmapped) => {
+    const collecter = modelMapper(unmapped)
+    await fileWriter(collecter);
 }
 
 const urlConstructor = (amount, category, difficult, type, token) => {
@@ -161,6 +181,7 @@ const modelMapper = (unmapped) => {
     let medium = true;
     let mapped = unmapped.results
         .filter((question) => question.type === "multiple")
+        .sort((a, b) => a.category.localeCompare(b.category))
         .map((question) => {
             let points;
 
@@ -176,14 +197,14 @@ const modelMapper = (unmapped) => {
 
                 case "medium":
                     if (medium) {
-                        points = "400"
+                        points = "300"
                     } else {
                         points = "600"
                     }
                     medium = !medium;
                     break;
-                
-                case "hard" : points = "1000"; break;
+
+                case "hard": points = "1000"; break;
             }
 
             return {

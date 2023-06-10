@@ -4,17 +4,38 @@ const fs = require("fs").promises;
 const path = require("path");
 
 const URL = process.env.TRIVIA_API;
-const { conversation , categoryMapper} = require("./TriviaAPI_TextTable");
+const { conversation, categoryMapper } = require("./TriviaAPI_TextTable");
+const { TIMEOUT } = require('dns');
 
 const main = async () => {
-    const repeat = await dialog();
-    for (let i = 0; i < repeat; i++) {
-        const response = await grabber();
-        const mapped = modelMapper(response);
+    const unmapped = [];
+    try {
+        const repeat = await dialog();
+        for (let i = 0; i < repeat; i++) {
+            const response = await grabber();
+            response.forEach(q => {
+                unmapped.push(q)
+            });
+
+            const progressCheck = (i + 1) % (repeat / 10);
+              
+            if (progressCheck === 0) {
+              const progress = ((i + 1) / repeat) * 100;
+              console.log("Progress: " + progress + "%");
+            }
+
+            await delay(20)
+        }
+        console.log(conversation[4]);
+    } catch (e) {
+        console.log(e)
+    } finally {
+        const mapped = modelMapper(unmapped);
         await fileWriter(mapped);
     }
-    console.log(conversation[4]);
 }
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const consoleQuestion = (prompt) => {
     const rl = readline.createInterface({
@@ -74,6 +95,11 @@ const modelMapper = (unmapped) => {
     let medium = true;
     let mapped = unmapped
         .filter((question) => question.type === "text_choice")
+        .sort((a, b) => {
+            const catA = categoryMapper[a.category](a.tags)
+            const catB = categoryMapper[b.category](b.tags)
+            return catA.localeCompare(catB)
+        })
         .map((question) => {
             let points;
 
@@ -89,14 +115,14 @@ const modelMapper = (unmapped) => {
 
                 case "medium":
                     if (medium) {
-                        points = "400"
+                        points = "300"
                     } else {
                         points = "600"
                     }
                     medium = !medium;
                     break;
-                
-                case "hard" : points = "1000"; break;
+
+                case "hard": points = "1000"; break;
             }
             const category = categoryMapper[question.category](question.tags)
             return {
