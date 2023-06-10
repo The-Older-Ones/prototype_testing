@@ -24,7 +24,7 @@ const main = async () => {
               console.log("Progress: " + progress + "%");
             }
 
-            await delay(20)
+            await delay(100)
         }
         console.log(conversation[4]);
     } catch (e) {

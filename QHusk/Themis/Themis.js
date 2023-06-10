@@ -7,7 +7,6 @@ const evaluator = "question"
 const folderPath = __dirname + "/input";
 const hashMap = {};
 const chunks = [];
-const chunkSize = 50;
 
 async function main() {
     try {
@@ -30,36 +29,21 @@ async function main() {
 
         await Promise.all(fileReadPromises);
 
-        let currentChunk = [];
-        let index = 0;
-
         for (const [key, value] of Object.entries(hashMap)) {
-            currentChunk[index] = value;
-            index++;
-
-            if (index % chunkSize === 0) {
-                chunks.push(currentChunk);
-                currentChunk = [];
-                index = 0;
-            }
+            chunks.push(value)
         }
 
-        if (currentChunk.length > 0) {
-            chunks.push(currentChunk);
-        }
+        const now = new Date();
+        const milliseconds = now.getMilliseconds();
+        const timestamp =
+            now.toISOString().replace(/:/g, "-").replace(/\..+/, "") +
+            `-${milliseconds}`;
+        const fileName = `questions_${timestamp}.json`;
+        const jsonData = JSON.stringify(chunks, null, 2);
+        const targetFilePath = path.join(__dirname, "./output", fileName);
+        await fs.writeFile(targetFilePath, jsonData, "utf8");
+        console.log(`Datei: ${fileName} erfolgreich erstellt.`);
 
-        for (let i = 0; i < chunks.length; i++) {
-            const now = new Date();
-            const milliseconds = now.getMilliseconds();
-            const timestamp =
-                now.toISOString().replace(/:/g, "-").replace(/\..+/, "") +
-                `-${milliseconds}`;
-            const fileName = `questions_${timestamp}_${i + 1}.json`;
-            const jsonData = JSON.stringify(chunks[i], null, 2);
-            const targetFilePath = path.join(__dirname, "./output", fileName);
-            await fs.writeFile(targetFilePath, jsonData, "utf8");
-            console.log(`Datei: ${fileName} erfolgreich erstellt.`);
-        }
 
         console.log("Verarbeitung abgeschlossen.");
     } catch (err) {
