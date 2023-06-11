@@ -1,5 +1,9 @@
 # DB_Initer
 ---
+## Warnung!
+Prototyp wurde bereits in Backend Project übernommen und ist mittlerweile veraltet. Zudem wird dieser auch nicht weiter aktualisiert.
+
+---
 ## Benötigte Technologien
 - Node V19.2.0 oder höher
 - npm
